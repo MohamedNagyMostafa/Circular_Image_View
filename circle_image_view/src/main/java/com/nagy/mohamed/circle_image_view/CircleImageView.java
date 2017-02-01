@@ -102,12 +102,12 @@ public class CircleImageView extends ImageView {
     }
 
     private void setAttr(Context context, AttributeSet attributeSet) {
-        TypedArray typedArray = context.getTheme().obtainStyledAttributes(attributeSet, styleable.CircleImageView, 0, 0);
+        TypedArray typedArray = context.getTheme().obtainStyledAttributes(attributeSet, R.styleable.CircleImageView, 0, 0);
 
         try {
-            this.radius = Integer.valueOf(typedArray.getInteger(styleable.CircleImageView_radius, 200));
-            this.borderSize = typedArray.getInteger(styleable.CircleImageView_borderSize, 0);
-            this.borderColor = typedArray.getColor(styleable.CircleImageView_borderColor, 0);
+            this.radius = Integer.valueOf(typedArray.getInteger(R.styleable.CircleImageView_radius, 200));
+            this.borderSize = typedArray.getInteger(R.styleable.CircleImageView_borderSize, 0);
+            this.borderColor = typedArray.getColor(R.styleable.CircleImageView_borderColor, 0);
             this.squareSideLength = this.radius.intValue() * 2;
         } finally {
             typedArray.recycle();
